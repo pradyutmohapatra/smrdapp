@@ -1,8 +1,9 @@
 package com.tatapower.smrd.controller;
 
-import com.tatapower.smrd.dto.DiscomRequestDTO;
+import com.tatapower.smrd.dto.DiscomRequest;
 import com.tatapower.smrd.service.DiscomService;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,9 +17,9 @@ public class DiscomController {
         this.discomService = discomService;
     }
 
-    @PostMapping("/save")
-    public String saveDiscom(DiscomRequestDTO discomRequestDTO) {
-        discomService.saveDiscom(discomRequestDTO);
+    @PostMapping("/saveDiscom")
+    public String saveDiscom(@RequestBody DiscomRequest discomRequest) {
+        discomService.saveDiscom(discomRequest);
         return "success";
     }
 }

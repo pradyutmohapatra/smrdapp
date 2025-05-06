@@ -1,5 +1,6 @@
 package com.tatapower.smrd.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +8,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DeptRequestDTO {
+public class DiscomRequest{
+
     private Long id;
-    private String name;
+    @NotBlank(message = "Name is required")
+    private  String name;
 
 }

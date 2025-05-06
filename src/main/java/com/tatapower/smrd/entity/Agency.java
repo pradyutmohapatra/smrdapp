@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
 @Table(name = "agency")
 @Data
@@ -22,5 +24,8 @@ public class Agency {
     @ManyToOne
     @JoinColumn(name = "discom_id", nullable = false)
     private Discom discom;
+    @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Agent> agents;
+
 }
 
