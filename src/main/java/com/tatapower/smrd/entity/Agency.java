@@ -20,11 +20,21 @@ public class Agency {
     private Long agencyId;
 
     private String agencyName;
+    private String agencyAdress;
+    private String email;
+    private String personalMobile;
+    private String officeMobile;
+    private String userName;
+    @OneToOne
+    @JoinColumn(name="role_id")
+    private RoleMaster  roleMaster;
+    @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<WorkType> workType;
 
     @ManyToOne
     @JoinColumn(name = "discom_id", nullable = false)
     private Discom discom;
-    @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "agency", cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
     private List<Agent> agents;
 
 }

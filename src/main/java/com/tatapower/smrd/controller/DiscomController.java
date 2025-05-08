@@ -1,5 +1,4 @@
 package com.tatapower.smrd.controller;
-
 import com.tatapower.smrd.dto.DiscomRequest;
 import com.tatapower.smrd.service.DiscomService;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/discom")
 public class DiscomController {
-
     private final DiscomService discomService;
 
     public DiscomController(DiscomService discomService) {

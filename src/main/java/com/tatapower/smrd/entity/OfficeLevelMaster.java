@@ -16,7 +16,6 @@ public class OfficeLevelMaster {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long officeLevelId;
-
     private String levelName;
 
     @ManyToOne

@@ -20,4 +20,8 @@ public class RoleMaster {
     private String roleName;
 
     private String entityName;
+    @OneToOne(mappedBy="roleMaster")
+    private Agency agency;
+    @OneToOne(mappedBy = "roleMaster")
+    private Agent agent;
 }

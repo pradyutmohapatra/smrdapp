@@ -27,11 +27,8 @@ public class WorkType {
     @JoinColumn(name="discomId")
     private Discom discom;
 
-    @ManyToMany
-    @JoinTable(
-            name = "agentWorkTypeMapping",
-            joinColumns = @JoinColumn(name="workAreaId"),inverseJoinColumns = @JoinColumn(name="agentId")
-
-    )
-    private List<Agent> agents;
+    @OneToOne(mappedBy="workType")
+    private Agent agent;
+    @ManyToOne
+    private Agency agency;
 }

@@ -17,9 +17,9 @@ public class Discom{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long discomId;
     private String discomName;
-    @OneToMany(mappedBy = "discom", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Department> departments;
-    @OneToMany(mappedBy = "discom", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Agency> agencies;
+//    @OneToMany(mappedBy = "discom", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<Department> departments;
+//    @OneToMany(mappedBy = "discom", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private List<Agency> agencies;
 
 }

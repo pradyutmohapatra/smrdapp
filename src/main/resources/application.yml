@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/pravat01
+    url: jdbc:postgresql://localhost:5432/TATA_POWER_LOGIN_APP
     username: postgres
-    password: kumar
+    password: root
     driver-class-name: org.postgresql.Driver
 
   jpa:
